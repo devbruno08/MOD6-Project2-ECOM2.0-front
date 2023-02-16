@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { api } from "../../utils/api/api";
 import { Product } from "../../utils/types/products.type";
 import { CardContent, CardSection, ButtonSection } from "./styles";
+import { FaCartPlus } from "react-icons/fa"
 
 interface CardProps extends Product {
   update: () => void;
@@ -48,6 +49,11 @@ export function Card({
           }}
         >
           See +
+        </button>
+        <button onClick={() => {
+          navigate("/shoppingcart/" + id)
+        }}>
+          <FaCartPlus size={17}/>
         </button>
       </ButtonSection>
     </CardSection>

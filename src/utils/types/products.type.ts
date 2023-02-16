@@ -14,3 +14,9 @@ export type ProductInput = {
   category: string;
   imageURL: string;
 };
+
+export type CartProduct = {
+  id: string;
+  name: string;
+  quantity: number;
+}
